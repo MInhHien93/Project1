@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình tròn</title>
+</head>
+<body>
+<input type="number" id="bk" placeholder="Bán kính">
+<button type="button" onclick="tinh()">Kết quả</button>
+<b><p>Chu vi hình tròn là:</p></b>
+<p id="cv"></p> <br>
+<b><p>Diện tích hình tròn là:</p></b>
+<p id="dt"></p> <br><br>
+<script>
+    function tinh() {
+        let r = +document.getElementById('bk').value;
+        let perimeter = r * 2 * Math.PI;
+        let area = r * r * Math.PI;
+        document.getElementById('cv').innerHTML=perimeter;
+        document.getElementById('dt').innerHTML=area;
+
+
+    }
+</script>
+</body>
+</html>

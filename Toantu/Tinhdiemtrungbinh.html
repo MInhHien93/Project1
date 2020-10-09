@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình của sinh viên</title>
+</head>
+<body>
+<b><p>Nhập điểm các môn</p></b>
+<br>
+<input type="number" id="vl" placeholder="Vật lý">
+<br><br>
+<input type="number" id="hh" placeholder="Hóa học">
+<br><br>
+<input type="number" id="sh" placeholder="Sinh học">
+<br><br><br>
+<button type="button" onclick="tinh()">Kết quả</button>
+<b><p>Tổng điểm các môn:</p></b>
+<p type="Number" id = 'tinhtong'></p>
+<b><p>Điểm trung bình các môn:</p></b>
+<p typer ='number' id ='tb'></p>
+<script>
+    function tinh() {
+        let a = +document.getElementById('vl').value;
+        let b = +document.getElementById('hh').value;
+        let c = +document.getElementById('sh').value;
+        let sum = a + b + c;
+        let avg = sum / 3;
+        document.getElementById('tinhtong').innerHTML=sum;
+        document.getElementById('tb').innerHTML=avg;
+
+
+    }
+
+
+</script>
+</body>
+</html>
