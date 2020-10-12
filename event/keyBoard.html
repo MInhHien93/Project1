@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<form>
+    <img id="doremon" src="../images/doremon.jpg" alt="" style="position:absolute; left: 0px; top: 0px; width: 200px">
+</form>
+<script>
+    let element = document.getElementById('doremon');
+    function upArrowPressed() {
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+    function downArrowPressed() {
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+    function leftArrowPressed() {
+        element.style.left = parseInt(element.style.left) - 5 + 'px'
+    }
+    function rightArrowPressed() {
+        element.style.left = parseInt(element.style.left) + 5 + 'px'
+    }
+    function moveSelection(evt) {
+        switch (evt.key) {
+            case "ArrowUp":
+                    upArrowPressed();
+                    break;
+            case "ArrowDown":
+                    downArrowPressed();
+                    break;
+            case "ArrowLeft":
+                    leftArrowPressed();
+                    break;
+            case "ArrowRight":
+                    rightArrowPressed();
+                    break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+
+</body>
+</html>
